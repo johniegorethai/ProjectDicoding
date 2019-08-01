@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarMovieDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarMovieDetail">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_MovieImageDetail"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/poster_dragonball"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/tv_MovieTitleDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Full Metal asasfdfdfdfdasdasddasdasdasdadasdasdasdadsAlchemist"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_MovieImageDetail"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/star"
+                android:layout_margin="5dp"
+                app:layout_constraintLeft_toRightOf="@id/iv_MovieImageDetail"
+                app:layout_constraintTop_toBottomOf="@id/tv_MovieTitleDetail"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_MovieRatingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_MovieTitleDetail"
+                app:layout_constraintLeft_toRightOf="@id/star"
+                />
+
+            <TextView
+                android:id="@+id/tv_MovieDateDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="December, 21th 2018"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_MovieRatingDetail"
+                app:layout_constraintLeft_toRightOf="@id/iv_MovieImageDetail"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tv_MovieGenreDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/genre_avengerinfinitywar"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_MovieDateDetail"
+                app:layout_constraintStart_toEndOf="@id/iv_MovieImageDetail"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_MovieDirectorDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Director"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_MovieImageDetail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_MovieCastDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cast"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_MovieDirectorDetail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_MovieDescDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follows the adventures of Monkey D. Luffy and his friends in order to find the greatest treasure ever left by the legendary Pirate, Gol D Roger. The famous mystery treasure named One Piece."
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_MovieCastDetail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
